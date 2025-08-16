@@ -1,0 +1,17 @@
+# Core
+python==3.10
+tensorflow==2.15
+
+# Data handling
+numpy
+pandas
+
+# Visualization
+matplotlib
+seaborn
+
+# Machine learning utilities
+scikit-learn
+
+# Jupyter notebook support
+jupyter
