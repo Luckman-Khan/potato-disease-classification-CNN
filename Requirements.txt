@@ -1,0 +1,19 @@
+# Core
+tensorflow
+
+# Data handling
+numpy
+pandas
+
+# Visualization
+matplotlib
+seaborn
+
+# Machine learning utilities
+scikit-learn
+Pillow
+streamlit
+
+# Jupyter notebook support
+jupyter
+notebook
