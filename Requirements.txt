@@ -1,19 +1,4 @@
-# Core
-tensorflow
-
-# Data handling
+streamlit==1.57.0
+tensorflow==2.20.0
 numpy
-pandas
-
-# Visualization
-matplotlib
-seaborn
-
-# Machine learning utilities
-scikit-learn
 Pillow
-streamlit
-
-# Jupyter notebook support
-jupyter
-notebook

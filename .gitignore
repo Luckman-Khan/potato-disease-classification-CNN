@@ -1,0 +1,20 @@
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+
+# Local training data and generated output
+Potato/
+Output/
+scratch/
+training/
+
+# Unused development API and alternate model export
+API/
+Models/1.keras
+Models/model.py
+
+# Local app/runtime files
+.streamlit/secrets.toml
+*.log

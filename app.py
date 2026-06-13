@@ -10,9 +10,9 @@ ROOT_DIR = Path(__file__).resolve().parent
 MODEL_PATH = ROOT_DIR / "Models" / "potato_model" / "1"
 CLASS_NAMES = ("Early Blight", "Late Blight", "Healthy")
 DEMO_IMAGES = {
-    "Early Blight": ROOT_DIR / "Potato" / "Test" / "Potato___Early_blight",
-    "Late Blight": ROOT_DIR / "Potato" / "Test" / "Potato___Late_blight",
-    "Healthy": ROOT_DIR / "Potato" / "Test" / "Potato___healthy",
+    "Early Blight": ROOT_DIR / "demo_images" / "early_blight.jpg",
+    "Late Blight": ROOT_DIR / "demo_images" / "late_blight.jpg",
+    "Healthy": ROOT_DIR / "demo_images" / "healthy.jpg",
 }
 
 
@@ -147,12 +147,12 @@ with camera_tab:
 
 with demo_tab:
     demo_class = st.selectbox("Choose a demo leaf", CLASS_NAMES)
-    demo_files = sorted(DEMO_IMAGES[demo_class].glob("*"))
-    if not demo_files:
+    demo_path = DEMO_IMAGES[demo_class]
+    if not demo_path.exists():
         st.error(f"No demo image was found for {demo_class}.")
     else:
         try:
-            demo_image = open_image(demo_files[0])
+            demo_image = open_image(demo_path)
             st.image(
                 demo_image,
                 caption=f"Demo image: {demo_class}",
